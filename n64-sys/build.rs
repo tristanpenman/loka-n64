@@ -3,7 +3,7 @@ use std::{fs, io::BufRead, path::Path, process::Command};
 fn main() {
     println!("cargo:rerun-if-changed=rsp");
 
-    let bass = Path::new("../tools/bass/bass.exe").canonicalize().unwrap();
+    let bass = Path::new("../tools/bass/bass").canonicalize().unwrap();
     let bass = bass.to_string_lossy();
     let bass = bass.trim_start_matches("\\\\?\\");
 
